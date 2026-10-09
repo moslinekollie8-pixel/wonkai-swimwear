@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wonkia Swimwear | Feel the Summer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff9f5;
+            color: #503522;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #fff9f5;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            display: block;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 5px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #503522;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #c77e86;
+        }
+
+        .hero {
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            padding: 70px 10%;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255, 239, 224, 0.97),
+                    rgba(255, 239, 224, 0.65),
+                    rgba(255, 239, 224, 0.05)
+                ),
+                url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
+                center/cover;
+        }
+
+        .hero-content {
+            max-width: 510px;
+        }
+
+        .eyebrow {
+            color: #a66a51;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.1;
+            margin: 18px 0;
+        }
+
+        .hero p {
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 28px;
+            border-radius: 30px;
+            background: #6b4028;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #bd7d82;
+            transform: translateY(-2px);
+        }
+
+        .intro {
+            text-align: center;
+            padding: 65px 20px 35px;
+        }
+
+        .intro h2,
+        .about h2 {
+            font-family: Georgia, serif;
+            font-size: 34px;
+            margin: 10px 0;
+        }
+
+        .intro p {
+            max-width: 550px;
+            margin: auto;
+            color: #76665a;
+        }
+
+        .collections {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            padding: 25px 8% 75px;
+        }
+
+        .collection-card {
+            min-height: 260px;
+            border-radius: 8px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+
+        .collection-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                transparent,
+                rgba(44, 26, 18, 0.65)
+            );
+        }
+
+        .collection-card h3,
+        .collection-card p {
+            position: relative;
+        }
+
+        .collection-card h3 {
+            font-family: Georgia, serif;
+            font-size: 25px;
+        }
+
+        .bikinis {
+            background-image: url(
+                "https://images.unsplash.com/photo-1539109136881-3be0616acf4b"
+            );
+        }
+
+        .one-pieces {
+            background-image: url(
+                "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f"
+            );
+        }
+
+        .beachwear {
+            background-image: url(
+                "https://images.unsplash.com/photo-1519046904884-53103b34b206"
+            );
+        }
+
+        .about {
+            background: #f3e1d8;
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 600px;
+            margin: 15px auto 0;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .contact p {
+            margin: 12px auto 25px;
+        }
+
+        footer {
+            background: #503522;
+            color: #fff9f5;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                padding: 65px 7%;
+                background-position: center;
+            }
+
+            .hero-content {
+                background: rgba(255, 249, 245, 0.75);
+                padding: 15px;
+                border-radius: 10px;
+            }
+
+            .collections {
+                grid-template-columns: 1fr;
+                padding-left: 7%;
+                padding-right: 7%;
+            }
+
+            .collection-card {
+                min-height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            Wonkia
+            <span>SWIMWEAR</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Collections</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">WELCOME TO WONKAI SWIMWEAR</p>
+
+            <h1>Your summer.<br>Your style.</h1>
+
+            <p>
+                Discover swimwear made for sunshine,
+                beach days, and unforgettable moments.
+                Your next favorite look starts here.
+            </p>
+
+            <a href="#shop" class="button">Explore Collection</a>
+        </div>
+    </section>
+
+    <section class="intro" id="shop">
+        <p class="eyebrow">FIND YOUR BEACH STYLE</p>
+
+        <h2>Our Collections</h2>
+
+        <p>
+            From relaxed beach days to sunny getaways,
+            discover styles to make every moment special.
+        </p>
+    </section>
+
+    <section class="collections">
+        <div class="collection-card bikinis">
+            <h3>Bikinis</h3>
+            <p>Find your sunny-day favorite.</p>
+        </div>
+
+        <div class="collection-card one-pieces">
+            <h3>One-Pieces swimsuits</h3>
+            <p>Simple, timeless, beautiful.</p>
+        </div>
+
+        <div class="collection-card beachwear">
+            <h3>Beachwear</h3>
+            <p>Complete your summer look.</p>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <p class="eyebrow">THE STORY BEHIND THE BRAND</p>
+
+        <h2>Welcome to Wonkia</h2>
+
+        <p>
+            Wonkia Swimwear celebrates personal style,
+            comfort, and the joy of being yourself.
+            We believe every beach day deserves something special.
+        </p>
+    </section>
+
+    <section class="contact" id="contact">
+        <p class="eyebrow">LET'S CONNECT</p>
+
+        <h2>Ready for your next beach day?</h2>
+
+        <p>
+            Have a question about our collections?
+            Get in touch with Wonkia.
+        </p>
+
+        <a class="button"
+           href="https://wa.me/32177606503"
+              target="_blank"
+             rel="noopener noreferrer"> 
+            Chat with wonkai on whatsApp
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Wonkia Swimwear. All rights reserved.</p>
+        <p>Made with love for sunny days.</p>
+    </footer>
+
+</body>
+</html>
